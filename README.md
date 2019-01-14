@@ -3,15 +3,13 @@
 ## Prerequisites
 
 * To compile the project, SDL-1.2, SDL_image-1.2 and SDL_gfx are needed. It will not compile with SDL2 !
-* To compile the doc, Doxygen (at least 1.8.3) OBis needed.
-* To compile the report, pdfLaTeX is needed.
+* To compile the doc, Doxygen (at least 1.8.3) is needed.
 
 ## Compiling
 
 * To compile the project, go to the root and type `make`.
 * To compile the tests, go to the root and type `make test`.
 * To compile the doc, go to the root and type `make doc`.
-* To compile to report, go to the root and type `make report`.
 
 ## Installing
 

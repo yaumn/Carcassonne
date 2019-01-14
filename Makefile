@@ -1,5 +1,5 @@
 export CC=gcc
-export CFLAGS=-Wall -Wextra -std=c99 -g -O0
+export CFLAGS=-Wall -Wextra -std=c99
 export ENABLE_GUI=1
 
 
@@ -21,12 +21,8 @@ install: build
 doc:
 	cd doc && doxygen Doxyfile ; cd ../
 
-.PHONY: report
-report:
-	cd report && pdflatex report.tex ; cd ../
-
 .PHONY: all
-all: build test install doc report
+all: build test install doc
 
 .PHONY: clean
 clean:
@@ -35,5 +31,4 @@ clean:
 	rm -f src/common/*.o src/common/*~
 	@make -C tst clean
 	rm -f install/server install/*.so
-	rm -f report/*.log report/*.out report/*.aux report/*.toc report/*.pdf
 	rm -rf doc/html doc/latex
